@@ -1,0 +1,12 @@
+micronaut:
+  application:
+    name: micronaut-client-sample
+  server:
+    port: 2020
+  http:
+    client:
+      myclient:
+        ssl:
+          enabled: true
+          trust-store: classpath:keystore.jks
+          trust-store-password: password
