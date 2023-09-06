@@ -5,8 +5,20 @@ micronaut:
     port: 2020
   http:
     client:
-      myclient:
-        ssl:
-          enabled: true
-          trust-store: classpath:keystore.jks
-          trust-store-password: password
+      ssl:
+        key-store:
+          path: classpath:truststore.jks
+          password: 123456
+          type: jks
+        insecure-trust-all-certificates: true
+#        enabled: true
+#        trust-store: classpath:keystore.jks
+#        trust-store-password: password
+
+#  http:
+#    client:
+##      myclient:
+#        ssl:
+#          enabled: true
+#          trust-store: classpath:keystore.jks
+#          trust-store-password: password
